@@ -7,9 +7,9 @@ Look at my personalized GitHub contributions graph 👇
 
 ... in english:
 <picture>
-  <source srcset="https://contributions-inky.vercel.app/api/svg?username=a104437ana&theme=dark&lang=en" media="(prefers-color-scheme: dark)" />
-  <source srcset="https://contributions-inky.vercel.app/api/svg?username=a104437ana&theme=light&lang=en" media="(prefers-color-scheme: light)" />
-  <img src="https://contributions-inky.vercel.app/api/svg?username=a104437ana&theme=light&lang=en" width="1000" alt="contributions" />
+  <source srcset="https://contributions-inky.vercel.app/api/svg?username=a104437ana&theme=dark&lang=en&v=2" media="(prefers-color-scheme: dark)" />
+  <source srcset="https://contributions-inky.vercel.app/api/svg?username=a104437ana&theme=light&lang=en&v=2" media="(prefers-color-scheme: light)" />
+  <img src="https://contributions-inky.vercel.app/api/svg?username=a104437ana&theme=light&lang=en&v=2" width="1000" alt="contributions" />
 </picture>
 ... in portuguese:
 <picture>
