@@ -27,19 +27,19 @@ function generateSVG(weeks, theme, lang) {
         bg:     'transparent',
         empty:  '#161b22',
         stroke: '#21262d',
-        c1:     '#5a1a2e',
-        c2:     '#a0284d',
-        c3:     '#d94f7a',
-        c4:     '#ff6b9d',
+        c1:     '#4a0d2a',
+        c2:     '#880e40',
+        c3:     '#e91e63',
+        c4:     '#f48fb1',
       }
     : {
         bg:     'transparent',
         empty:  '#ebedf0',
         stroke: '#d0d7de',
-        c1:     '#ffc8d8',
-        c2:     '#ff8fab',
-        c3:     '#e8547a',
-        c4:     '#c2185b',
+        c1:     '#fce4ec',
+        c2:     '#f48fb1',
+        c3:     '#e91e63',
+        c4:     '#880e40',
       };
 
   const levelColors = ['', colors.c1, colors.c2, colors.c3, colors.c4];
