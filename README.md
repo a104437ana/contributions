@@ -5,7 +5,7 @@ I created this project because I wanted to have a GitHub contributions graph on 
 
 Look at my personalized GitHub contributions graph 👇
 
-... and in english:
+... in english:
 <picture>
   <source srcset="https://contributions-inky.vercel.app/api/svg?username=a104437ana&theme=dark&lang=en" media="(prefers-color-scheme: dark)" />
   <source srcset="https://contributions-inky.vercel.app/api/svg?username=a104437ana&theme=light&lang=en" media="(prefers-color-scheme: light)" />
