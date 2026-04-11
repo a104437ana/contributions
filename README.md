@@ -9,8 +9,18 @@ This graph has the following features:
 - **Customizable colors** 🎨 (but I chose pink).
 
 Look at my personalized GitHub contributions graph 👇
-
-In progress... 🚧
+... and in english:
+<picture>
+  <source srcset="https://contributions-inky.vercel.app/api/svg?username=a104437ana&theme=dark&lang=en" media="(prefers-color-scheme: dark)" />
+  <source srcset="https://contributions-inky.vercel.app/api/svg?username=a104437ana&theme=light&lang=en" media="(prefers-color-scheme: light)" />
+  <img src="https://contributions-inky.vercel.app/api/svg?username=a104437ana&theme=light&lang=en" width="1000" alt="contributions" />
+</picture>
+... in portuguese:
+<picture>
+  <source srcset="https://contributions-inky.vercel.app/api/svg?username=a104437ana&theme=dark&lang=pt" media="(prefers-color-scheme: dark)" />
+  <source srcset="https://contributions-inky.vercel.app/api/svg?username=a104437ana&theme=light&lang=pt" media="(prefers-color-scheme: light)" />
+  <img src="https://contributions-inky.vercel.app/api/svg?username=a104437ana&theme=light&lang=pt" width="1000" alt="contributions" />
+</picture>
 
 ## Support
 1. If you find any bugs or have any suggestions, feel free to reach out!
