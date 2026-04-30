@@ -52,28 +52,30 @@ function generateSVG(weeks, theme, lang) {
   const H = 7 * step + paddingTop + paddingBottom;
 
   let cells = '';
-  let monthMarkers = {};
+  let monthMarkers = [];
+  let lastMonth = -1;
+  let lastLabelWeek = -10;
 
   weeks.forEach((week, wi) => {
-    const firstDay = week.contributionDays[0];
+    const firstDay = week.contributionDays.find(d => d.date);
     if (firstDay) {
-      const m = new Date(firstDay.date).getMonth();
-      if (monthMarkers[m] === undefined) monthMarkers[m] = wi;
+      const date = new Date(firstDay.date);
+      const m = date.getMonth();
+      const d = date.getDate();
+      if (m !== lastMonth && d <= 7 && (wi - lastLabelWeek) > 2) {
+        monthMarkers.push({ m, wi });
+        lastMonth = m;
+        lastLabelWeek = wi;
+      }
     }
     week.contributionDays.forEach(day => {
       const dow = new Date(day.date).getDay();
-      const x = paddingLeft + wi * step;
-      const y = paddingTop + dow * step;
-      const level = getLevel(day.contributionCount);
-      const fill = level === 0 ? colors.empty : levelColors[level];
-      cells += `<rect x="${x}" y="${y}" width="${cellSize}" height="${cellSize}" rx="2" fill="${fill}" stroke="${colors.stroke}" stroke-width="0.5" />`;
-    });
   });
 
   let monthLabels = '';
-  Object.entries(monthMarkers).forEach(([m, wi]) => {
+  monthMarkers.forEach(({ m, wi }) => {
     const x = paddingLeft + wi * step;
-    monthLabels += `<text x="${x}" y="${paddingTop - 8}" font-size="9" fill="${labelColor}" font-family="monospace">${MONTHS[m]}</text>`;
+    monthLabels += `<text x="${x}" y="${paddingTop - 8}" font-size="9" fill="${isDark ? '#ffffff' : '#000000'}" font-family="monospace">${MONTHS[m]}</text>`;
   });
 
   let dayLabels = '';
