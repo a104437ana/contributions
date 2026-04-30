@@ -72,11 +72,9 @@ function generateSVG(weeks, theme, lang) {
       const dow = new Date(day.date).getDay();
       const x = paddingLeft + wi * step;
       const y = paddingTop + dow * step;
-      if (day.contributionCount > 0) {
-        cells += flower(x + cellSize / 2, y + cellSize / 2, getLevel(day.contributionCount));
-      } else {
-        cells += `<rect x="${x}" y="${y}" width="${cellSize}" height="${cellSize}" rx="2" fill="transparent" stroke="${isDark ? '#4a7a44 ' : '#99ff7d'}" stroke-width="0.8" />`;
-      }
+      const level = getLevel(day.contributionCount);
+      const fill = level === 0 ? colors.empty : levelColors[level];
+      cells += `<rect x="${x}" y="${y}" width="${cellSize}" height="${cellSize}" rx="2" fill="${fill}" stroke="${colors.stroke}" stroke-width="0.5" />`;
     });
   });
 
